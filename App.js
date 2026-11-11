@@ -63,8 +63,13 @@ const FOTO_PERFIL = require('./assets/perfil.png');
 
 // Fotos dos mapas: adicione uma linha para cada foto que estiver em assets/
 const IMAGENS_MAPAS = {
-  // Ascent: require('./assets/ascent.png'),
-  // Bind: require('./assets/bind.png'),
+  Ascent: require('./assets/ascent.png'),
+  Bind: require('./assets/bind.png'),
+  Haven: require('./assets/haven.png'),
+  Icebox: require('./assets/icebox.png'),
+  Lotus: require('./assets/lotus.png'),
+  Split: require('./assets/split.png'),
+  Sunset: require('./assets/sunset.png'),
 };
 
 // Se o mapa não tiver foto, usa uma imagem provisória
