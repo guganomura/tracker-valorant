@@ -220,9 +220,10 @@ function Chips({ opcoes, selecionado, onSelect }) {
   );
 }
 
-function Campo({ label, ...props }) {
+// emLinha: divide o espaço com outros campos na mesma linha (Kills/Deaths/Assists)
+function Campo({ label, emLinha, ...props }) {
   return (
-    <View style={{ flex: 1 }}>
+    <View style={emLinha && { flex: 1 }}>
       <Text style={styles.label}>{label}</Text>
       <TextInput style={styles.input} placeholderTextColor={CORES.cinza} {...props} />
     </View>
@@ -474,9 +475,9 @@ function RegistrarScreen({ navigation, route }) {
       </View>
 
       <View style={styles.linha}>
-        <Campo label="Kills" value={kills} onChangeText={setKills} keyboardType="numeric" placeholder="0" />
-        <Campo label="Deaths" value={deaths} onChangeText={setDeaths} keyboardType="numeric" placeholder="0" />
-        <Campo label="Assists" value={assists} onChangeText={setAssists} keyboardType="numeric" placeholder="0" />
+        <Campo emLinha label="Kills" value={kills} onChangeText={setKills} keyboardType="numeric" placeholder="0" />
+        <Campo emLinha label="Deaths" value={deaths} onChangeText={setDeaths} keyboardType="numeric" placeholder="0" />
+        <Campo emLinha label="Assists" value={assists} onChangeText={setAssists} keyboardType="numeric" placeholder="0" />
       </View>
 
       <Campo label="Placar" value={placar} onChangeText={setPlacar} placeholder="13-9" />
